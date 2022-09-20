@@ -1,3 +1,4 @@
+using Application;
 using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Service Registration
 builder.Services.AddPersistenceServices(builder.Configuration);
+builder.Services.AddApplicationServices();
 
 
 builder.Services.AddControllers();

@@ -55,7 +55,7 @@ public class Repository<TypeEntity> : IRepository<TypeEntity> where TypeEntity :
     }
 
     public async Task<TypeEntity?> GetByIdAsync(Guid id, Boolean enableTracking) {
-        return enableTracking ? await Table.FindAsync(id) : await Table.FirstOrDefaultAsync(x => x.Id.Equals(id));
+        return enableTracking ? await Table.FindAsync(id) : await Table.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(id));
     }
 
     public async Task<TypeEntity?> GetSingleAsync(Expression<Func<TypeEntity, Boolean>> expression, Boolean enableTracking) {
