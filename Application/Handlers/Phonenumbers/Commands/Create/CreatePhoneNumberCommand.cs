@@ -1,12 +1,12 @@
-﻿using Application.Handlers.Phonenumbers.BusinessRules;
-using Application.Handlers.Phonenumbers.Dtos.Commands;
+﻿using Application.Handlers.PhoneNumbers.BusinessRules;
+using Application.Handlers.PhoneNumbers.Dtos.Commands;
 using Application.Handlers.PhoneNumbers.Constants;
 using Application.Repositories;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
 
-namespace Application.Handlers.Phonenumbers.Commands.Create;
+namespace Application.Handlers.PhoneNumbers.Commands.Create;
 
 public class CreatePhoneNumberCommand : IRequest<CreatedPhoneNumberDto> {
 	public String CountryCode { get; set; }

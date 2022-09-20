@@ -1,4 +1,4 @@
-﻿namespace Application.Handlers.Phonenumbers.Dtos.Commands;
+﻿namespace Application.Handlers.PhoneNumbers.Dtos.Commands;
 public record CreatedPhoneNumberDto {
     public Guid Id { get; set; }
     public String Number { get; set; }

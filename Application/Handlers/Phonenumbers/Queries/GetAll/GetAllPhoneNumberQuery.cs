@@ -1,7 +1,7 @@
-﻿using Application.Handlers.Phonenumbers.Dtos.Queries;
+﻿using Application.Handlers.PhoneNumbers.Dtos.Queries;
 using MediatR;
 
-namespace Application.Handlers.Phonenumbers.Queries.GetAll;
+namespace Application.Handlers.PhoneNumbers.Queries.GetAll;
 public class GetAllPhoneNumberQuery : IRequest<GetAllPhoneNumberDto> {
 
     internal class GetAllPhoneNumberQueryHandler : IRequestHandler<GetAllPhoneNumberQuery, GetAllPhoneNumberDto> {

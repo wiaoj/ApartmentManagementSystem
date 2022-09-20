@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Users\" />
     <Folder Include="Handlers\Vehicles\" />
   </ItemGroup>
 

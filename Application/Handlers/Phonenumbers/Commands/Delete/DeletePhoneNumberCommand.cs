@@ -1,12 +1,12 @@
-﻿using Application.Handlers.Phonenumbers.BusinessRules;
-using Application.Handlers.Phonenumbers.Dtos.Commands;
+﻿using Application.Handlers.PhoneNumbers.BusinessRules;
+using Application.Handlers.PhoneNumbers.Dtos.Commands;
 using Application.Handlers.PhoneNumbers.Constants;
 using Application.Repositories;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
 
-namespace Application.Handlers.Phonenumbers.Commands.Delete;
+namespace Application.Handlers.PhoneNumbers.Commands.Delete;
 
 public class DeletePhoneNumberCommand : IRequest<DeletedPhoneNumberDto> {
     public Guid Id { get; set; }

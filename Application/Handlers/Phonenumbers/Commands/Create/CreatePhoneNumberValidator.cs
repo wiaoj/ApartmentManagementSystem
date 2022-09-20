@@ -1,7 +1,7 @@
-﻿using Application.Handlers.Phonenumbers.Common.ValidationExtension;
+﻿using Application.Handlers.PhoneNumbers.Common.ValidationExtension;
 using FluentValidation;
 
-namespace Application.Handlers.Phonenumbers.Commands.Create;
+namespace Application.Handlers.PhoneNumbers.Commands.Create;
 public class CreatePhoneNumberValidator : AbstractValidator<CreatePhoneNumberCommand> {
 	public CreatePhoneNumberValidator() {
 		RuleFor(x => x.CountryCode).CountryCode();

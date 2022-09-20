@@ -2,12 +2,13 @@
 using Application.Repositories;
 using Domain.Entities;
 
-namespace Application.Handlers.Phonenumbers.BusinessRules;
+namespace Application.Handlers.PhoneNumbers.BusinessRules;
 internal class PhoneNumberBusinessRules {
-	private readonly IPhoneNumberRepository _phoneNumberRepository;
-	public PhoneNumberBusinessRules(IPhoneNumberRepository phoneNumberRepository) {
-		this._phoneNumberRepository = phoneNumberRepository;
-	}
+    private readonly IPhoneNumberRepository _phoneNumberRepository;
+
+    public PhoneNumberBusinessRules(IPhoneNumberRepository phoneNumberRepository) {
+        _phoneNumberRepository = phoneNumberRepository;
+    }
 
     public async Task PhoneNumberCanNotBeDuplicatedWhenInserted(String number) {
         IQueryable<PhoneNumber> result = await _phoneNumberRepository
@@ -25,5 +26,4 @@ internal class PhoneNumberBusinessRules {
         _ = await _phoneNumberRepository.GetByIdAsync(id, enableTracking: false)
             ?? throw new Exception(PhoneNumberMessageConstants.NotFound);
     }
-
 }

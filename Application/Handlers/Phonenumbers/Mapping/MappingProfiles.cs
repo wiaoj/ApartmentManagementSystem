@@ -1,12 +1,12 @@
-﻿using Application.Handlers.Phonenumbers.Commands.Create;
-using Application.Handlers.Phonenumbers.Commands.Delete;
-using Application.Handlers.Phonenumbers.Commands.Update;
-using Application.Handlers.Phonenumbers.Dtos.Commands;
+﻿using Application.Handlers.PhoneNumbers.Commands.Create;
+using Application.Handlers.PhoneNumbers.Commands.Delete;
+using Application.Handlers.PhoneNumbers.Commands.Update;
+using Application.Handlers.PhoneNumbers.Dtos.Commands;
 using Application.Handlers.PhoneNumbers.Constants;
 using AutoMapper;
 using Domain.Entities;
 
-namespace Application.Handlers.Phonenumbers.Mapping;
+namespace Application.Handlers.PhoneNumbers.Mapping;
 public class MappingProfiles : Profile{
 	public MappingProfiles() {
 		CreateMap<PhoneNumber, CreatePhoneNumberCommand>()
