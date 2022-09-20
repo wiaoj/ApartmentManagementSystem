@@ -1,11 +1,15 @@
 ﻿using Application.Repositories.Base;
 using Domain.Entities.Base;
 using Microsoft.EntityFrameworkCore;
+using Persistence.Contexts;
 using System.Linq.Expressions;
 
 namespace Persistence.Repositories.Base;
 public class Repository<TypeEntity> : IRepository<TypeEntity> where TypeEntity : IBaseEntity, new() {
-    public DbSet<TypeEntity> Table => throw new NotImplementedException();
+    private readonly ApartmentManagementSystemDbContext _context;
+    public Repository(ApartmentManagementSystemDbContext context) => this._context = context;
+
+    public DbSet<TypeEntity> Table => _context.Set<TypeEntity>();
 
     public Task<Boolean> AddAsync(TypeEntity entity) => throw new NotImplementedException();
     public Task<Boolean> AddRangeAsync(ICollection<TypeEntity> entities) => throw new NotImplementedException();

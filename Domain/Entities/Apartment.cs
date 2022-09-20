@@ -10,9 +10,6 @@ public class Apartment : IBaseEntity {
     public String Type { get; set; }
     public ApartmentState ApartmentState { get; set; }
 
-    public Guid UserId { get; set; }
-    public User User { get; set; }
-
     public Apartment() { }
     public Apartment(String number, String blockNo, String floor, String type, ApartmentState apartmentState) : this() {
         Number = number;
@@ -21,5 +18,4 @@ public class Apartment : IBaseEntity {
         Type = type;
         ApartmentState = apartmentState;
     }
-
 }

@@ -16,15 +16,12 @@ public class User : IBaseEntity {
     public ICollection<Vehicle> Vehicles { get; set; }
 
     public User() { }
-    public User(String firstName, String lastName, String ıdentityNumber, String email, ICollection<PhoneNumber> phoneNumbers, Boolean ısTenant, Guid apartmentId, Apartment apartment, ICollection<Vehicle> vehicles) : this() {
+    public User(String firstName, String lastName, String identityNumber, String email, Boolean isTenant, Guid apartmentId) : this() {
         this.FirstName = firstName;
         this.LastName = lastName;
-        this.IdentityNumber = ıdentityNumber;
+        this.IdentityNumber = identityNumber;
         this.Email = email;
-        this.PhoneNumbers = phoneNumbers;
-        this.IsTenant = ısTenant;
+        this.IsTenant = isTenant;
         this.ApartmentId = apartmentId;
-        this.Apartment = apartment;
-        this.Vehicles = vehicles;
     }
 }
