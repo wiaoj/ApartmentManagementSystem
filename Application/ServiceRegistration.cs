@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using Application.Handlers.Phonenumbers.BusinessRules;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -10,6 +11,8 @@ public static class ServiceRegistration {
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
+
+        services.AddScoped<PhoneNumberBusinessRules>();
         return services;
     }
 }

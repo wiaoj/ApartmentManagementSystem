@@ -21,10 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Apartments\" />
-    <Folder Include="Handlers\NewFolder\" />
     <Folder Include="Handlers\Users\" />
-    <Folder Include="Handlers\Phonenumbers\" />
     <Folder Include="Handlers\Vehicles\" />
   </ItemGroup>
 

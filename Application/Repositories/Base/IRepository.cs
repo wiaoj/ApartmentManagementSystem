@@ -14,10 +14,10 @@ public interface IRepository<TypeEntity> where TypeEntity : IBaseEntity, new() {
     Task<TypeEntity?> GetByIdAsync(Guid id, Boolean enableTracking);
 
 
-    Task AddAsync(TypeEntity entity);
-    Task AddRangeAsync(ICollection<TypeEntity> entities);
-    Task DeleteAsync(TypeEntity entity);
-    Task DeleteRangeAsync(ICollection<TypeEntity> entities);
-    Task DeleteAsync(Guid id);
-    Task UpdateAsync(TypeEntity entity);
+    Task<TypeEntity> AddAsync(TypeEntity entity);
+    Task<ICollection<TypeEntity>> AddRangeAsync(ICollection<TypeEntity> entities);
+    Task<TypeEntity> DeleteAsync(TypeEntity entity);
+    Task<ICollection<TypeEntity>> DeleteRangeAsync(ICollection<TypeEntity> entities);
+    Task<TypeEntity> DeleteAsync(Guid id);
+    Task<TypeEntity> UpdateAsync(TypeEntity entity);
 }

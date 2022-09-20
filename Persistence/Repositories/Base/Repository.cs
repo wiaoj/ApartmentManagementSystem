@@ -12,35 +12,40 @@ public class Repository<TypeEntity> : IRepository<TypeEntity> where TypeEntity :
     public DbSet<TypeEntity> Table => _context.Set<TypeEntity>();
 
     private async Task SaveChangesAsync() => await _context.SaveChangesAsync();
-    public async Task AddAsync(TypeEntity entity) {
+    public async Task<TypeEntity> AddAsync(TypeEntity entity) {
         await Table.AddAsync(entity);
         await SaveChangesAsync();
+        return entity;
     }
 
-    public async Task AddRangeAsync(ICollection<TypeEntity> entities) {
+    public async Task<ICollection<TypeEntity>> AddRangeAsync(ICollection<TypeEntity> entities) {
         await Table.AddRangeAsync(entities);
         await SaveChangesAsync();
+        return entities;
     }
 
-    public async Task DeleteAsync(TypeEntity entity) {
-        await Task.Run(async () => {
+    public async Task<TypeEntity> DeleteAsync(TypeEntity entity) {
+        return await Task.Run(async () => {
             Table.Remove(entity);
             await SaveChangesAsync();
+            return entity;
         });
     }
 
-    public async Task DeleteAsync(Guid id) {
-        await Task.Run(async () => {
+    public async Task<TypeEntity> DeleteAsync(Guid id) {
+        return await Task.Run(async () => {
             TypeEntity? entity = await GetByIdAsync(id, enableTracking: true);
             Table.Remove(entity);
             await SaveChangesAsync();
+            return entity;
         });
     }
 
-    public async Task DeleteRangeAsync(ICollection<TypeEntity> entities) {
-        await Task.Run(async () => {
+    public async Task<ICollection<TypeEntity>> DeleteRangeAsync(ICollection<TypeEntity> entities) {
+        return await Task.Run(async () => {
             Table.RemoveRange(entities);
             await SaveChangesAsync();
+            return entities;
         });
     }
 
@@ -69,10 +74,11 @@ public class Repository<TypeEntity> : IRepository<TypeEntity> where TypeEntity :
         });
     }
 
-    public async Task UpdateAsync(TypeEntity entity) {
-        await Task.Run(async () => {
+    public async Task<TypeEntity> UpdateAsync(TypeEntity entity) {
+        return await Task.Run(async () => {
             Table.Update(entity);
             await SaveChangesAsync();
+            return entity;
         });
     }
 }
