@@ -8,7 +8,7 @@ public class Vehicle : IBaseEntity {
     public Guid CarOwnerId { get; set; }
     public User CarOwner { get; set; }
 
-    public Vehicle() : base() { }
+    public Vehicle() { }
     public Vehicle(String plate, User carOwner) : this() {
         Plate = plate;
         CarOwner = carOwner;

@@ -13,7 +13,7 @@ public class Apartment : IBaseEntity {
     public Guid UserId { get; set; }
     public User User { get; set; }
 
-    public Apartment() : base() { }
+    public Apartment() { }
     public Apartment(String number, String blockNo, String floor, String type, ApartmentState apartmentState) : this() {
         Number = number;
         BlockNo = blockNo;

@@ -14,4 +14,17 @@ public class User : IBaseEntity {
     public Apartment Apartment { get; set; }
 
     public ICollection<Vehicle> Vehicles { get; set; }
+
+    public User() { }
+    public User(String firstName, String lastName, String ıdentityNumber, String email, ICollection<PhoneNumber> phoneNumbers, Boolean ısTenant, Guid apartmentId, Apartment apartment, ICollection<Vehicle> vehicles) : this() {
+        this.FirstName = firstName;
+        this.LastName = lastName;
+        this.IdentityNumber = ıdentityNumber;
+        this.Email = email;
+        this.PhoneNumbers = phoneNumbers;
+        this.IsTenant = ısTenant;
+        this.ApartmentId = apartmentId;
+        this.Apartment = apartment;
+        this.Vehicles = vehicles;
+    }
 }
