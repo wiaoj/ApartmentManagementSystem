@@ -23,7 +23,7 @@ public class GetByUserIdBillQuery : IRequest<IQueryable<GetByUserIdBillDto>> {
         public async Task<IQueryable<GetByUserIdBillDto>> Handle(GetByUserIdBillQuery request, CancellationToken cancellationToken) {
             await _billBusinessRules.BillShouldExistWhenRequestUserId(request.UserId);
 
-            IQueryable<Bill>? bill = await _billRepository.GetWhereAsync(x => x.CarOwnerId.Equals(request.UserId), enableTracking: false);
+            IQueryable<Bill>? bill = await _billRepository.GetWhereAsync(x => x.UserId.Equals(request.UserId), enableTracking: false);
 
             IQueryable<GetByUserIdBillDto> getByIdBillDto = _mapper.ProjectTo<GetByUserIdBillDto>(bill);
 

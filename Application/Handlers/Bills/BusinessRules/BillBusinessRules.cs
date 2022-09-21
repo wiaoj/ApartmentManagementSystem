@@ -10,12 +10,7 @@ internal class BillBusinessRules {
         _billRepository = billRepository;
     }
 
-    public async Task BillPlateCanNotBeDuplicatedWhenInserted(String plate) {
-        IQueryable<Bill> result = await _billRepository
-            .GetWhereAsync(x => x.Plate.Equals(plate), enableTracking: false);
-        if(result.Any())
-            throw new Exception(BillMessageConstants.AlredyExist);
-    }
+    public async Task BillPlateCanNotBeDuplicatedWhenInserted() { }
 
     public Task BillShouldExistWhenRequest(Bill? bill) {
         _ = bill ?? throw new Exception(BillMessageConstants.NotFound);
@@ -28,7 +23,7 @@ internal class BillBusinessRules {
     }
 
     public async Task BillShouldExistWhenRequestUserId(Guid userId) {
-        _ = await _billRepository.GetWhereAsync(x => x.CarOwnerId.Equals(userId), enableTracking: false)
+        _ = await _billRepository.GetWhereAsync(x => x.UserId.Equals(userId), enableTracking: false)
             ?? throw new Exception(BillMessageConstants.NotFound);
     }
 }
