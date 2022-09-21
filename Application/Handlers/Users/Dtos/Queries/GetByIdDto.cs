@@ -7,7 +7,6 @@ public record GetByIdUserDto {
     public String Email { get; set; }
     public Boolean IsTenant { get; set; }
     public Guid ApartmentId { get; set; }
-    public String Message { get; set; }
 
     //araç - telefon - daire bilgileri eklenecek
 }

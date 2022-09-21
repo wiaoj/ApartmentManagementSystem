@@ -46,8 +46,7 @@ internal static class RuleBuilderExtensions {
 
     public static IRuleBuilder<T, Boolean> Tenant<T>(this IRuleBuilder<T, Boolean> ruleBuilder) {
         var options = ruleBuilder
-            .NotNull()
-            .NotEmpty();
+            .NotNull();
         return options;
     }
 }

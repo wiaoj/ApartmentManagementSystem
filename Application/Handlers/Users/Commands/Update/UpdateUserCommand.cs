@@ -35,7 +35,7 @@ public class UpdateUserCommand : IRequest<UpdatedUserDto> {
             User updatedUser = await _userRepository.UpdateAsync(mappedUser);
 
             UpdatedUserDto updatedUserDto = _mapper.Map<UpdatedUserDto>(updatedUser);
-            updatedUserDto.Message = UserMessageConstants.Created;
+            updatedUserDto.Message = UserMessageConstants.Updated;
 
             return updatedUserDto;
         }
