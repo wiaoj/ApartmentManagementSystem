@@ -1,3 +1,12 @@
+CQRS Design Pattern
+
+MediatR
+
+AutoMapper
+
+FluentValidation
+
+
 #Admin/Yönetici
 +Daire bilgilerini girebilir.
 +Ýkamet eden kullanýcý bilgilerini girer.
@@ -41,6 +50,10 @@ Yönetici daire bilgilerini girer.
 
 Projede kullanýlacaklar:
 
-Web projesi için .Net 5 MVC
-Sistemin yönetimi/database için MS SQL Server
-Kredi kartý servisi için. Veriler mongodb de tutulacak. Servis .Net WebApi olarak yazýlacaktýr.
++Web projesi için .Net 5 MVC #.Net 6 API
+
+
++Sistemin yönetimi/database için MS SQL Server
+
+
+-Kredi kartý servisi için. Veriler mongodb de tutulacak. Servis .Net WebApi olarak yazýlacaktýr.
