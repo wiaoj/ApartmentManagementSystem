@@ -17,12 +17,12 @@ public class UpdateUserCommand : IRequest<UpdatedUserDto> {
     public Boolean IsTenant { get; set; }
     public Guid ApartmentId { get; set; }
 
-    internal class UpdateCommandHandler : IRequestHandler<UpdateUserCommand, UpdatedUserDto> {
+    internal class UpdateUserCommandHandler : IRequestHandler<UpdateUserCommand, UpdatedUserDto> {
         private readonly IUserRepository _userRepository;
         private readonly UserBusinessRules _userBusinessRules;
         private readonly IMapper _mapper;
 
-        public UpdateCommandHandler(IUserRepository userRepository, UserBusinessRules userBusinessRules, IMapper mapper) {
+        public UpdateUserCommandHandler(IUserRepository userRepository, UserBusinessRules userBusinessRules, IMapper mapper) {
             _userRepository = userRepository;
             _userBusinessRules = userBusinessRules;
             _mapper = mapper;

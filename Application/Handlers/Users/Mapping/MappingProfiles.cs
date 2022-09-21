@@ -3,13 +3,12 @@ using Application.Handlers.Users.Commands.Delete;
 using Application.Handlers.Users.Commands.Update;
 using Application.Handlers.Users.Dtos.Commands;
 using Application.Handlers.Users.Dtos.Queries;
-using Application.Handlers.Users.Queries.GetById;
 using AutoMapper;
 using Domain.Entities;
 
 namespace Application.Handlers.Users.Mapping;
-public class MappingProfiles : Profile{
-	public MappingProfiles() {
+public class MappingProfiles : Profile {
+    public MappingProfiles() {
         CreateMap<User, CreateUserCommand>().ReverseMap();
         CreateMap<User, CreatedUserDto>().ReverseMap();
 
@@ -20,6 +19,8 @@ public class MappingProfiles : Profile{
         CreateMap<User, UpdatedUserDto>().ReverseMap();
 
         CreateMap<User, GetAllUserDto>().ReverseMap();
-        CreateMap<User, GetByIdUserDto>().ReverseMap();
+        CreateMap<User, GetByIdUserDto>()
+            .ForMember(x => x.Vehicles, opt => opt.MapFrom(x => x.Vehicles))
+            .ReverseMap();
     }
 }

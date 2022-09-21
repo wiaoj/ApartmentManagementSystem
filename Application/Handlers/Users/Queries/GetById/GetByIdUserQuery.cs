@@ -4,6 +4,7 @@ using Application.Repositories;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Handlers.Users.Queries.GetById;
 public class GetByIdUserQuery : IRequest<GetByIdUserDto> {
@@ -23,7 +24,10 @@ public class GetByIdUserQuery : IRequest<GetByIdUserDto> {
         public async Task<GetByIdUserDto> Handle(GetByIdUserQuery request, CancellationToken cancellationToken) {
             await _userBusinessRules.UserShouldExistWhenRequestId(request.Id);
 
-            User? user = await _userRepository.GetByIdAsync(request.Id, enableTracking: false);
+            User? user = await _userRepository.GetByIdAsync(
+                request.Id,
+                include: x => x.Include(u => u.Vehicles),
+                enableTracking: false);
 
             //gereksiz ama keyfi eklendi - neden olmasın
             await _userBusinessRules.UserShouldExistWhenRequest(user);

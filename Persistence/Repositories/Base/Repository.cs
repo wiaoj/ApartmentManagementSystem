@@ -1,6 +1,7 @@
 ﻿using Application.Repositories.Base;
 using Domain.Entities.Base;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query;
 using Persistence.Contexts;
 using System.Linq.Expressions;
 
@@ -56,6 +57,18 @@ public class Repository<TypeEntity> : IRepository<TypeEntity> where TypeEntity :
 
     public async Task<TypeEntity?> GetByIdAsync(Guid id, Boolean enableTracking) {
         return enableTracking ? await Table.FindAsync(id) : await Table.AsNoTracking().FirstOrDefaultAsync(x => x.Id.Equals(id));
+    }
+
+    public async Task<TypeEntity?> GetByIdAsync(Guid id,
+        Func<IQueryable<TypeEntity>, IIncludableQueryable<TypeEntity, Object>>? include = null,
+        Boolean enableTracking = true) {
+
+        var entity = Table.AsQueryable();
+        if(enableTracking is false)
+            entity = entity.AsNoTracking();
+        if(include is not null)
+            entity = include(entity);
+        return await entity.FirstOrDefaultAsync(x => x.Id.Equals(id));
     }
 
     public async Task<TypeEntity?> GetSingleAsync(Expression<Func<TypeEntity, Boolean>> expression, Boolean enableTracking) {

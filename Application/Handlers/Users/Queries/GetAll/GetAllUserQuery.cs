@@ -7,11 +7,11 @@ using MediatR;
 namespace Application.Handlers.Users.Queries.GetAll;
 public class GetAllUserQuery : IRequest<IQueryable<GetAllUserDto>> {
 
-    internal class GetAllQueryHandler : IRequestHandler<GetAllUserQuery, IQueryable<GetAllUserDto>> {
+    internal class GetAllUserQueryHandler : IRequestHandler<GetAllUserQuery, IQueryable<GetAllUserDto>> {
         private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
 
-        public GetAllQueryHandler(IUserRepository userRepository, IMapper mapper) {
+        public GetAllUserQueryHandler(IUserRepository userRepository, IMapper mapper) {
             _userRepository = userRepository;
             _mapper = mapper;
         }

@@ -8,7 +8,7 @@ internal static class RuleBuilderExtensions {
             .NotEmpty();
         return options;
     }
-    
+
     public static IRuleBuilder<T, String> FirstName<T>(this IRuleBuilder<T, String> ruleBuilder) {
         var options = ruleBuilder
             .NotNull()
@@ -17,7 +17,7 @@ internal static class RuleBuilderExtensions {
             .MaximumLength(64);
         return options;
     }
-    
+
     public static IRuleBuilder<T, String> LastName<T>(this IRuleBuilder<T, String> ruleBuilder) {
         var options = ruleBuilder
             .NotNull()

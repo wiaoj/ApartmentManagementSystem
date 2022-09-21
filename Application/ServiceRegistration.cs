@@ -1,5 +1,6 @@
 ﻿using Application.Handlers.PhoneNumbers.BusinessRules;
 using Application.Handlers.Users.BusinessRules;
+using Application.Handlers.Vehicles.BusinessRules;
 using Application.Pipelines;
 using FluentValidation;
 using MediatR;
@@ -16,6 +17,7 @@ public static class ServiceRegistration {
 
         services.AddScoped<PhoneNumberBusinessRules>();
         services.AddScoped<UserBusinessRules>();
+        services.AddScoped<VehicleBusinessRules>();
         return services;
     }
 }

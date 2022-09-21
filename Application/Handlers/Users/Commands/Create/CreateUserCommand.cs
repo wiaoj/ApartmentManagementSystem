@@ -17,12 +17,12 @@ public class CreateUserCommand : IRequest<CreatedUserDto> {
     public Boolean IsTenant { get; set; }
     public Guid ApartmentId { get; set; }
 
-    internal class CreateCommandHandler : IRequestHandler<CreateUserCommand, CreatedUserDto> {
+    internal class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, CreatedUserDto> {
         private readonly IUserRepository _userRepository;
         private readonly UserBusinessRules _userBusinessRules;
         private readonly IMapper _mapper;
 
-        public CreateCommandHandler(IUserRepository userRepository, UserBusinessRules userBusinessRules, IMapper mapper) {
+        public CreateUserCommandHandler(IUserRepository userRepository, UserBusinessRules userBusinessRules, IMapper mapper) {
             _userRepository = userRepository;
             _userBusinessRules = userBusinessRules;
             _mapper = mapper;

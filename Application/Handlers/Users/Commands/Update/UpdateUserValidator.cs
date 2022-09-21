@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Application.Handlers.Users.Commands.Update;
 public class UpdateUserValidator : AbstractValidator<UpdateUserCommand> {
-	public UpdateUserValidator() {
+    public UpdateUserValidator() {
         RuleFor(x => x.Id).Id();
         RuleFor(x => x.FirstName).FirstName();
         RuleFor(x => x.LastName).LastName();

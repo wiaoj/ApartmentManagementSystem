@@ -7,7 +7,7 @@ internal class UserBusinessRules {
     private readonly IUserRepository _userRepository;
 
     public UserBusinessRules(IUserRepository userRepository) {
-        this._userRepository = userRepository;
+        _userRepository = userRepository;
     }
 
     public async Task UserIdentityNumberCanNotBeDuplicatedWhenInserted(String identityNumber) {

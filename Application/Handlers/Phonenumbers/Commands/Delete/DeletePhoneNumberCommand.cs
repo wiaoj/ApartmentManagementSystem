@@ -1,6 +1,6 @@
 ﻿using Application.Handlers.PhoneNumbers.BusinessRules;
-using Application.Handlers.PhoneNumbers.Dtos.Commands;
 using Application.Handlers.PhoneNumbers.Constants;
+using Application.Handlers.PhoneNumbers.Dtos.Commands;
 using Application.Repositories;
 using AutoMapper;
 using Domain.Entities;

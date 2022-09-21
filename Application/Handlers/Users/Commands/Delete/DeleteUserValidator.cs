@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Application.Handlers.Users.Commands.Delete;
 public class DeleteUserValidator : AbstractValidator<DeleteUserCommand> {
-	public DeleteUserValidator() {
-		RuleFor(x => x.Id).Id();
-	}
+    public DeleteUserValidator() {
+        RuleFor(x => x.Id).Id();
+    }
 }

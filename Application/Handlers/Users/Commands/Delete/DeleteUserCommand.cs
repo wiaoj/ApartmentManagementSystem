@@ -11,12 +11,12 @@ namespace Application.Handlers.Users.Commands.Delete;
 public class DeleteUserCommand : IRequest<DeletedUserDto> {
     public Guid Id { get; set; }
 
-    internal class DeleteCommandHandler : IRequestHandler<DeleteUserCommand, DeletedUserDto> {
+    internal class DeleteUserCommandHandler : IRequestHandler<DeleteUserCommand, DeletedUserDto> {
         private readonly IUserRepository _userRepository;
         private readonly UserBusinessRules _userBusinessRules;
         private readonly IMapper _mapper;
 
-        public DeleteCommandHandler(IUserRepository userRepository, UserBusinessRules userBusinessRules, IMapper mapper) {
+        public DeleteUserCommandHandler(IUserRepository userRepository, UserBusinessRules userBusinessRules, IMapper mapper) {
             _userRepository = userRepository;
             _userBusinessRules = userBusinessRules;
             _mapper = mapper;
