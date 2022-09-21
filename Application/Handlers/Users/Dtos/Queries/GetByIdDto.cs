@@ -14,5 +14,6 @@ public record GetByIdUserDto {
     public ICollection<GetByUserIdPhoneNumberDto> PhoneNumbers { get; set; }
     public ICollection<GetByUserIdVehicleDto> Vehicles { get; set; }
 
+    //public GetByUserIdApartmentDto GetByUserIdApartment { get; set; }
     //daire bilgileri eklenecek
 }
