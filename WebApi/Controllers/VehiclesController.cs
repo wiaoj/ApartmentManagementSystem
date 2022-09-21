@@ -44,6 +44,5 @@ public class VehiclesController : BaseController {
     public async Task<IActionResult> GetById([FromRoute] GetByUserIdVehicleQuery getByUserIdVehicleQuery) {
         IQueryable<GetByUserIdVehicleDto> result = await Mediator.Send(getByUserIdVehicleQuery);
         return Ok(result);
-
     }
 }
