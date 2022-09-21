@@ -9,13 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{657E7652-1C02-4409-9936-31E6DF5F89F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{8E485A70-9A7F-4E7D-A567-8B0741A63EFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{8E485A70-9A7F-4E7D-A567-8B0741A63EFB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi\WebApi.csproj", "{78AD4C3B-B043-42FB-8BDF-1C872E5D4315}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ACE163E1-008A-41CD-8194-1C970C9FD7AE}"
 	ProjectSection(SolutionItems) = preProject
-		Problem.txt = Problem.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global

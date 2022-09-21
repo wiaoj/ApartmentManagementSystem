@@ -1,4 +1,4 @@
-1-Admin/Yönetici
+#Admin/Yönetici
 Daire bilgilerini girebilir.
 Ýkamet eden kullanýcý bilgilerini girer.
 Daire baþýna ödenmesi gereken aidat ve fatura bilgilerini girer(Aylýk olarak). Toplu veya tek tek atama yapýlabilir.
@@ -9,9 +9,9 @@ Aylýk olarak borç-alacak listesini görür.
 Daire/konut bilgilerini listeler, düzenler siler.
 
 
-2-Kullanýcý
+#Kullanýcý
 Kendisine atanan fatura ve aidat bilgilerini görür.
-Kredi kartý ile ödeme yapabilir.
+-Kredi kartý ile ödeme yapabilir.
 Yöneticiye mesaj gönderebilir.
 
 +Daire/Konut bilgilerinde
@@ -30,14 +30,14 @@ Yöneticiye mesaj gönderebilir.
 +Telefon
 +Araç bilgisi(varsa plaka no)
 
-Sistem kullanýlmaya baþladýðýnda ilk olarak,
+##Sistem kullanýlmaya baþladýðýnda ilk olarak,
 
 Yönetici daire bilgilerini girer.
-Kullanýcý bilgilerini girer.Giriþ yapmasý için otomatik olarak bir þifre oluþturulur.
+-Kullanýcý bilgilerini girer.Giriþ yapmasý için otomatik olarak bir þifre oluþturulur.
 Kullanýcýlarý dairelere atar
 Ay bazlý olarak aidat bilgilerini girer.
 Ay bazlý olarak fatura bilgilerini girer
-Arayüz dýþýnda kullanýcýlarýn kredi kartý ile ödeme yapabilmesi için ayrý bir servis yazýlacaktýr. Bu servisde sistemde ki her bir kullanýcý için banka bilgileri(bakiye, kredi kartý no vb.) kontrol edilerek ödeme yapýlmasý saðlanýr.
+-Arayüz dýþýnda kullanýcýlarýn kredi kartý ile ödeme yapabilmesi için ayrý bir servis yazýlacaktýr. Bu servisde sistemde ki her bir kullanýcý için banka bilgileri(bakiye, kredi kartý no vb.) kontrol edilerek ödeme yapýlmasý saðlanýr.
 
 Projede kullanýlacaklar:
 

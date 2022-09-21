@@ -3,4 +3,4 @@ using Domain.Entities;
 
 namespace Application.Repositories;
 
-public interface IApartmentRepository : IRepository<Apartment> { }
+public interface IBillRepository : IRepository<Bill> { }
