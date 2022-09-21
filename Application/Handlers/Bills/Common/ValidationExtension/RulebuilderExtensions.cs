@@ -13,15 +13,14 @@ internal static class RuleBuilderExtensions {
     public static IRuleBuilder<T, BillType> BillType<T>(this IRuleBuilder<T, BillType> ruleBuilder) {
         var options = ruleBuilder
             .NotNull()
-            .NotEmpty();
+            .IsInEnum();
         return options;
     }
 
     public static IRuleBuilder<T, DateTime> Month<T>(this IRuleBuilder<T, DateTime> ruleBuilder) {
         var options = ruleBuilder
             .NotNull()
-            .NotEmpty()
-            .Must(x => x.Equals(DateTime.Now- new DateTime(DateTime.Now.Year,DateTime.Now.Month - 2, 1)));
+            .NotEmpty();
         return options;
     }
 

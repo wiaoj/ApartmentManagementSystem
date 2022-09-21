@@ -28,7 +28,8 @@ public class GetByIdUserQuery : IRequest<GetByIdUserDto> {
                 request.Id,
                 include: x => 
                     x.Include(u => u.Vehicles)
-                     .Include(u => u.PhoneNumbers),
+                     .Include(u => u.PhoneNumbers)
+                     .Include(u => u.Bills),
                 enableTracking: false);
 
             //gereksiz ama keyfi eklendi - neden olmasın
