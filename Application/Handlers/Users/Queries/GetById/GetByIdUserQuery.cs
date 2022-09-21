@@ -26,7 +26,9 @@ public class GetByIdUserQuery : IRequest<GetByIdUserDto> {
 
             User? user = await _userRepository.GetByIdAsync(
                 request.Id,
-                include: x => x.Include(u => u.Vehicles),
+                include: x => 
+                    x.Include(u => u.Vehicles)
+                     .Include(u => u.PhoneNumbers),
                 enableTracking: false);
 
             //gereksiz ama keyfi eklendi - neden olmasın

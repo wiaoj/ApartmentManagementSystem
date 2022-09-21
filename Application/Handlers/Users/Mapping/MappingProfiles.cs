@@ -20,6 +20,7 @@ public class MappingProfiles : Profile {
 
         CreateMap<User, GetAllUserDto>().ReverseMap();
         CreateMap<User, GetByIdUserDto>()
+            .ForMember(x => x.PhoneNumbers, opt => opt.MapFrom(x => x.PhoneNumbers))
             .ForMember(x => x.Vehicles, opt => opt.MapFrom(x => x.Vehicles))
             .ReverseMap();
     }

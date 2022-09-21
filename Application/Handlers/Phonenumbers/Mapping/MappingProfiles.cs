@@ -2,6 +2,7 @@
 using Application.Handlers.PhoneNumbers.Commands.Delete;
 using Application.Handlers.PhoneNumbers.Commands.Update;
 using Application.Handlers.PhoneNumbers.Dtos.Commands;
+using Application.Handlers.PhoneNumbers.Dtos.Queries;
 using AutoMapper;
 using Domain.Entities;
 
@@ -20,5 +21,7 @@ public class MappingProfiles : Profile {
 
         CreateMap<PhoneNumber, UpdatePhoneNumberCommand>().ReverseMap();
         CreateMap<PhoneNumber, UpdatedPhoneNumberDto>().ReverseMap();
+
+        CreateMap<PhoneNumber, GetByUserIdPhoneNumberDto>().ReverseMap();
     }
 }

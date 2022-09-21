@@ -1,4 +1,5 @@
-﻿using Application.Handlers.Vehicles.Dtos.Queries;
+﻿using Application.Handlers.PhoneNumbers.Dtos.Queries;
+using Application.Handlers.Vehicles.Dtos.Queries;
 
 namespace Application.Handlers.Users.Dtos.Queries;
 public record GetByIdUserDto {
@@ -10,7 +11,8 @@ public record GetByIdUserDto {
     public Boolean IsTenant { get; set; }
     public Guid ApartmentId { get; set; }
 
+    public ICollection<GetByUserIdPhoneNumberDto> PhoneNumbers { get; set; }
     public ICollection<GetByUserIdVehicleDto> Vehicles { get; set; }
 
-    //araç - telefon - daire bilgileri eklenecek
+    //daire bilgileri eklenecek
 }
