@@ -30,8 +30,6 @@ public class CreateBillCommand : IRequest<CreatedBillDto> {
         }
 
         public async Task<CreatedBillDto> Handle(CreateBillCommand request, CancellationToken cancellationToken) {
-            //await _billBusinessRules.BillPlateCanNotBeDuplicatedWhenInserted(request.?);
-
             Bill mappedBill = _mapper.Map<Bill>(request);
             Bill createdBill = await _billRepository.AddAsync(mappedBill);
 

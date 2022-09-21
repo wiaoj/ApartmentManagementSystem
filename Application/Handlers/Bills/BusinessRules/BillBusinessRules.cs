@@ -10,7 +10,7 @@ internal class BillBusinessRules {
         _billRepository = billRepository;
     }
 
-    public async Task BillPlateCanNotBeDuplicatedWhenInserted() { }
+    public async Task BillCanNotBeDuplicatedWhenInserted() { }
 
     public Task BillShouldExistWhenRequest(Bill? bill) {
         _ = bill ?? throw new Exception(BillMessageConstants.NotFound);

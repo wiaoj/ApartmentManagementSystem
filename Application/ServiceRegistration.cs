@@ -1,4 +1,5 @@
-﻿using Application.Handlers.Bills.BusinessRules;
+﻿using Application.Handlers.Apartments.BusinessRules;
+using Application.Handlers.Bills.BusinessRules;
 using Application.Handlers.PhoneNumbers.BusinessRules;
 using Application.Handlers.Users.BusinessRules;
 using Application.Handlers.Vehicles.BusinessRules;
@@ -16,6 +17,7 @@ public static class ServiceRegistration {
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
 
+        services.AddScoped<ApartmentBusinessRules>();
         services.AddScoped<PhoneNumberBusinessRules>();
         services.AddScoped<UserBusinessRules>();
         services.AddScoped<VehicleBusinessRules>();

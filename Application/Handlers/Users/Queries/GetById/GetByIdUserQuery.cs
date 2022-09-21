@@ -27,7 +27,8 @@ public class GetByIdUserQuery : IRequest<GetByIdUserDto> {
             User? user = await _userRepository.GetByIdAsync(
                 request.Id,
                 include: x => 
-                    x.Include(u => u.Vehicles)
+                    x.Include(u => u.Apartment)
+                     .Include(u => u.Vehicles)
                      .Include(u => u.PhoneNumbers)
                      .Include(u => u.Bills),
                 enableTracking: false);

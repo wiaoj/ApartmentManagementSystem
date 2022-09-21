@@ -1,18 +1,18 @@
 #Admin/Yönetici
-Daire bilgilerini girebilir.
-Ýkamet eden kullanýcý bilgilerini girer.
-Daire baþýna ödenmesi gereken aidat ve fatura bilgilerini girer(Aylýk olarak). Toplu veya tek tek atama yapýlabilir.
-Gelen ödeme bilgilerini görür.
-Gelen mesajlarý görür.
-Aylýk olarak borç-alacak listesini görür.
++Daire bilgilerini girebilir.
++Ýkamet eden kullanýcý bilgilerini girer.
++Daire baþýna ödenmesi gereken aidat ve fatura bilgilerini girer(Aylýk olarak). Toplu veya tek tek atama yapýlabilir.
+-Gelen ödeme bilgilerini görür.
+-Gelen mesajlarý görür.
+-Aylýk olarak borç-alacak listesini görür.
 +Kiþileri listeler, düzenler, siler.
-Daire/konut bilgilerini listeler, düzenler siler.
++Daire/konut bilgilerini listeler, düzenler siler.
 
 
 #Kullanýcý
-Kendisine atanan fatura ve aidat bilgilerini görür.
++Kendisine atanan fatura ve aidat bilgilerini görür.
 -Kredi kartý ile ödeme yapabilir.
-Yöneticiye mesaj gönderebilir.
+-Yöneticiye mesaj gönderebilir.
 
 +Daire/Konut bilgilerinde
 +Hangi blokda
@@ -34,9 +34,9 @@ Yöneticiye mesaj gönderebilir.
 
 Yönetici daire bilgilerini girer.
 -Kullanýcý bilgilerini girer.Giriþ yapmasý için otomatik olarak bir þifre oluþturulur.
-Kullanýcýlarý dairelere atar
-Ay bazlý olarak aidat bilgilerini girer.
-Ay bazlý olarak fatura bilgilerini girer
++Kullanýcýlarý dairelere atar
++Ay bazlý olarak aidat bilgilerini girer.
++Ay bazlý olarak fatura bilgilerini girer
 -Arayüz dýþýnda kullanýcýlarýn kredi kartý ile ödeme yapabilmesi için ayrý bir servis yazýlacaktýr. Bu servisde sistemde ki her bir kullanýcý için banka bilgileri(bakiye, kredi kartý no vb.) kontrol edilerek ödeme yapýlmasý saðlanýr.
 
 Projede kullanýlacaklar:
