@@ -15,6 +15,7 @@ public static class ServiceRegistration {
         services.AddScoped<IPhoneNumberRepository, PhoneNumberRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IVehicleRepository, VehicleRepository>();
+        services.AddScoped<IBillRepository, BillRepository>();
 
         return services;
     }

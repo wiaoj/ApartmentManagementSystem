@@ -1,4 +1,5 @@
-﻿using Application.Handlers.PhoneNumbers.BusinessRules;
+﻿using Application.Handlers.Bills.BusinessRules;
+using Application.Handlers.PhoneNumbers.BusinessRules;
 using Application.Handlers.Users.BusinessRules;
 using Application.Handlers.Vehicles.BusinessRules;
 using Application.Pipelines;
@@ -18,6 +19,7 @@ public static class ServiceRegistration {
         services.AddScoped<PhoneNumberBusinessRules>();
         services.AddScoped<UserBusinessRules>();
         services.AddScoped<VehicleBusinessRules>();
+        services.AddScoped<BillBusinessRules>();
         return services;
     }
 }
