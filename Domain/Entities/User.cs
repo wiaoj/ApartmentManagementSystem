@@ -14,6 +14,7 @@ public class User : IBaseEntity {
     public Apartment Apartment { get; set; }
 
     public ICollection<Vehicle> Vehicles { get; set; }
+    public ICollection<Bill> Bills { get; set; }
 
     public User() { }
     public User(String firstName, String lastName, String identityNumber, String email, Boolean isTenant, Guid apartmentId) : this() {

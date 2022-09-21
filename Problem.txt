@@ -5,7 +5,7 @@ Daire baþýna ödenmesi gereken aidat ve fatura bilgilerini girer(Aylýk olarak). T
 Gelen ödeme bilgilerini görür.
 Gelen mesajlarý görür.
 Aylýk olarak borç-alacak listesini görür.
-Kiþileri listeler, düzenler, siler.
++Kiþileri listeler, düzenler, siler.
 Daire/konut bilgilerini listeler, düzenler siler.
 
 
